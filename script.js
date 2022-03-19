@@ -26,6 +26,8 @@ let hideWords = false       // Used to decide if the words should be printed in 
 function setup() {
   noLoop()
   hideWords = false
+  let cnvs = createCanvas(1, 1)
+  cnvs.parent('canvas')
 }
 
 // The primary flow of logic, runs when "Create" is clicked
@@ -464,8 +466,9 @@ function setupCanvas() {
     canvasY = canvasX / numCols * numRows
   }
 
-  let canvas = createCanvas(canvasX + 1, canvasY + 1)
-  canvas.parent('canvas')
+  // canvas = createCanvas(canvasX + 1, canvasY + 1)
+  //canvas.parent('canvas')
+  resizeCanvas(canvasX + 1, canvasY + 1)
   textFont('Courier')
 
   if (myButton1.getAttribute('hidden') != null) {

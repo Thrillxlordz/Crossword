@@ -1,4 +1,3 @@
-<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script> -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -97,32 +96,35 @@
   }
 </script>
 <!DOCTYPE html>
+<style>
+  body {
+    background-color: lightgray;
+  }
+</style>
 <html>
-<title>Crossword Maker</title>
-<head>
-  <h1 style="text-align:center">Crossword Maker<span style="float:right"><a style="font-size:16px" href="https://thrillxlordz.github.io">Home</a></span>
-<!--  <input type="text" placeholder="Words to use seperated by a space" onkeydown="if (event.keyCode == 13) document.getElementById('myButton').click()" id="myInput" size="60"> -->
-  <table style="margin-left:auto;margin-right:auto">
-    <tr>
-        <td> <input class="word" id="wordRow1" placeholder="Word" onkeydown="if (event.keyCode == 13) document.getElementById('myButton').click()" size="10"> </td>
-        <td> <input class="hint" id="hintRow1" placeholder="Hint" onkeydown="if (event.keyCode == 13) document.getElementById('myButton').click()" size="60"> </td>
-    </tr>
-  </table>
-  <button type="button" id="myButton" onclick="main();">Create</button>
-  <button type="button" id="myButtonWords" onclick="showHideWords();" hidden>Show/Hide words</button>
-  <button type="button" id="myButtonSave" onclick="saveImage();" hidden>Save Crossword</button>
-  </h1>
-  <h3 style="text-align:center;font-size:16px" id = "h3" hidden></h3>
-  <h4 id="canvas" style="text-align:center"></h4>
-  <h5 style="text-align:center" id="h5" hidden>
-    <font size="4">Solutions:</font><br />
-<!--    <font size="2">Type 0: Top-left Type 1: Top-right Type 2: Bottom-left Type 3: Bottom-Right Type 4: Center Spiral</font><br /> -->
-    <button type="button" id="myButton1" onclick="changeDisplayedSolution(0, 0);" hidden>1</button>
-    <button type="button" id="myButton2" onclick="changeDisplayedSolution(0, 1);" hidden>2</button>
-    <button type="button" id="myButton3" onclick="changeDisplayedSolution(0, 2);" hidden>3</button>
-    <button type="button" id="myButton4" onclick="changeDisplayedSolution(0, 3);" hidden>4</button>
-    <button type="button" id="myButton5" onclick="changeDisplayedSolution(0, 4);" hidden>5</button>
-    <button type="button" id="myButtonWorst" onclick="changeDisplayedSolution(1, 0);" hidden>Worst</button>
-  </h5>
-</head>
+  <title>Crossword Maker</title>
+  <head>
+    <h1 style="text-align:center">Crossword Maker<span style="float:right"><a style="font-size:16px" href="https://thrillxlordz.github.io">Home</a></span>
+    <table style="margin-left:auto;margin-right:auto">
+      <tr>
+          <td> <input class="word" id="wordRow1" placeholder="Word" onkeydown="if (event.keyCode == 13) document.getElementById('myButton').click()" size="10"> </td>
+          <td> <input class="hint" id="hintRow1" placeholder="Hint" onkeydown="if (event.keyCode == 13) document.getElementById('myButton').click()" size="60"> </td>
+      </tr>
+    </table>
+    <button type="button" id="myButton" onclick="main();">Create</button>
+    <button type="button" id="myButtonWords" onclick="showHideWords();" hidden>Show/Hide words</button>
+    <button type="button" id="myButtonSave" onclick="saveImage();" hidden>Save Crossword</button>
+    </h1>
+    <h3 style="text-align:center;font-size:16px" id = "h3" hidden></h3>
+    <h4 id="canvas" style="text-align:center"></h4>
+    <h5 style="text-align:center" id="h5" hidden>
+      <font size="4">Solutions:</font><br />
+      <button type="button" id="myButton1" onclick="changeDisplayedSolution(0, 0);" hidden>1</button>
+      <button type="button" id="myButton2" onclick="changeDisplayedSolution(0, 1);" hidden>2</button>
+      <button type="button" id="myButton3" onclick="changeDisplayedSolution(0, 2);" hidden>3</button>
+      <button type="button" id="myButton4" onclick="changeDisplayedSolution(0, 3);" hidden>4</button>
+      <button type="button" id="myButton5" onclick="changeDisplayedSolution(0, 4);" hidden>5</button>
+      <button type="button" id="myButtonWorst" onclick="changeDisplayedSolution(1, 0);" hidden>Worst</button>
+    </h5>
+  </head>
 </html>
